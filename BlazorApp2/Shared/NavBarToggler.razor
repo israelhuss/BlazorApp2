@@ -1,0 +1,14 @@
+﻿<button class="custom-btn" @onclick="ToggleNavBar"><i class="fas fa-angle-double-left" style="color: white; transform: rotate(@($"{@rotate}deg"));"></i></button>
+
+@code {
+    private bool collapseNavBar = false;
+
+
+    public int rotate = 0;
+
+    private void ToggleNavBar()
+    {
+        collapseNavBar = !collapseNavBar;
+        rotate += 180;
+    }
+}
